@@ -24,12 +24,12 @@
 
         //reto-------------------------------------
         const taks = [
-            {title: 'Matematica', status: true},
-            {title: 'Idiomas', status: false},
+            {title: 'Matematicas', topic:'Calculos', done: true},
+            {title: 'Idiomas', topic: 'Ingles', done: false},
         ]; 
         const tarea = document.getElementById('tarea');
         taks.forEach(tak => {
-            tarea.innerHTML +=  `<li>${tak.title} - ${tak.status} <input type="checkbox" ${tak.status ? 'checked': ''}/></li>`;
+            tarea.innerHTML +=  `<li>${tak.title} - ${tak.topic} <input type="checkbox" ${tak.done ? 'checked': ''}/></li>`;
         });
 
 
