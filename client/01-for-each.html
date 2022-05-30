@@ -22,18 +22,18 @@
         });
         //en consola corre npx http-server client
 
-        //reto
+        //reto-------------------------------------
         const taks = [
-            {title: 'Matematica', status: 'Done'},
-            {title: 'Idiomas', status: 'In process'},
+            {title: 'Matematica', status: true},
+            {title: 'Idiomas', status: false},
         ]; 
         const tarea = document.getElementById('tarea');
         taks.forEach(tak => {
-            tarea.innerHTML +=  `<li>${tak.title} - ${tak.status} <input type="checkbox"></li>`;
+            tarea.innerHTML +=  `<li>${tak.title} - ${tak.status} <input type="checkbox" ${tak.status ? 'checked': ''}/></li>`;
         });
 
 
-        //aporte
+        //aporte-------------------------------------------
         const apps = document.getElementById('apps');
 
 const tasks = [
