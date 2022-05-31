@@ -12,3 +12,11 @@ console.log(sum);
 //sum = acumulador, | element = indice [i]
 const rta = totals.reduce((sum, element) => sum + element, 0)// (parametro1, parametro2) => parametro1, parametro2 | el 0 es el parametro2 y es el estado inicial
 console.log('rta', rta);
+
+//reto
+let numbers =[1, 1, 1];
+function solution(numbers){
+    const rtas = numbers.reduce((sum, element) => sum + element, 0)
+    return rtas
+};
+console.log(solution(numbers));
