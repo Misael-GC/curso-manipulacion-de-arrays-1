@@ -48,3 +48,46 @@ const rta3 = orders.map((item) => {
 
 console.log('rta3', rta3);  //[{ customerName: 'Nicolas', total: 60, delivered: true, tax: 0.19 },]
 console.log('original', orders); // [{ customerName: 'Nicolas', total: 60, delivered: true }]
+
+function solution(array) {
+    // Tu código aquí 👈 
+   
+} 
+
+// reto--------------------------------------
+//Debes agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base.
+//Por ejemplo si aplicamos el 19% de impuestos para un producto con precio de $1000 el resultado de los "taxes" será $190, debes tener en cuenta que como resultado se debe dejar un valor entero sin decimales.
+
+array = [
+    {
+      name: "Product 1",
+      price: 1000,
+      stock: 10
+    },
+    {
+      name: "Product 2",
+      price: 2000,
+      stock: 20
+    },
+  ];
+//Mi solucion
+  function solution(array) {
+    // Tu código aquí 👈 
+   const result = array.map((item) => {
+       return {
+           ...item,
+           tax: Math.trunc(.19 * item.price)
+       };
+   }); 
+   return result
+}; 
+
+console.log(solution(array))
+
+//respuesta
+function solution(array){
+    return array.map(item => ({
+        ...item,
+        taxes: Math.trunc(item.price * .19)
+    }))
+}; 
