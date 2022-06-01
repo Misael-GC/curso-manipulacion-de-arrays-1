@@ -42,3 +42,6 @@ elements.push(...otherEmlements);
 console.log('elementos', elements);
 // result elementos [ 1, 1, 2, 2, 3, 3, 4, 4 ]
 
+// Si estas trabajando con un arrays de Objs igual una forma de copiar cada elemento sin la referencia podría ser:
+
+const newArray = myArray.map(a => ({…a}));
