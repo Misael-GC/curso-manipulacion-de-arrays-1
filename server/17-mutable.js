@@ -111,3 +111,25 @@ newArray2[productIndexR2] = {
 }
 console.log('original', productsR2);
 console.log('new', newArray2);
+
+//----APORTES DEL RETO ----------------------------------------------------------
+// RETO 1 CON FILTER()
+ const productsA1 = products.filter(p => p.id != '🍔');
+ console.log("Apt1", productsA1);
+
+ // reto 2 con map y condicional if
+
+ const newArrayA2 = productsR2.map(item => {
+    if(item.id === updateR2.id){
+        return {
+            ...item,
+            ...updateR2.changes
+        }
+    }else{
+        return {
+            ...item
+        }
+    }
+});
+
+console.log('aporte2', newArrayA2);
