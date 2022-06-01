@@ -1,4 +1,5 @@
 //For Each: ayuda hacer un recorrido de items de un array
+//No modifica
 const letters = ['a', 'b', 'c'];
 
 //con el for 
