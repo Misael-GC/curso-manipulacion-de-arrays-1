@@ -29,3 +29,48 @@ console.log('flat', rta);
 
 
 
+//reto ver como hacer esto con arrays dentro de más arrays sin usar flat
+function profundidad(list){
+    let newList = [];
+    if (typeof list != "object")return [list];
+    list.forEach(element => {
+        newList = newList.concat(profundidad(element));
+    });
+    return newList;
+}
+const newArray1 = profundidad(matriz);
+console.log("lol",newArray1);
+
+// result: lol [ 1, 2, 3, 4, 5, 6, 1, 2, 1, 2, 7, 8, 9 ]
+
+
+//otra version del reto
+
+const hardMatrix = [
+    [1, 2, [3, 3]],
+    [4, [5, 5, [4, 2]], 6],
+    [[1, [2, 3, 4, [3, [2, 1]]]], 8, 9],
+  ];
+  
+  const recursiveArray = [];
+  
+  //La función recibe un array y el índice que se quiere evaluar
+  const flatFunction = (array, index) => {
+    // Si el índice ya es igual a lenght no hay comparación por hacer
+    if (index === array.length) {
+      return;
+    }
+  
+    // Si el valor del array en ese índice es un objeto, vuelvo a llamar esta función con el índice cero.
+    if (typeof array[index] === 'object') {
+      flatFunction(array[index], 0);
+    } else {
+      // Si no es un objeto, es un valor, así que puedo hacer push()
+      recursiveArray.push(array[index]);
+    }
+    // Independiente del If, hay que seguir evaluando las demás posiciones del array recibido.
+    flatFunction(array, index + 1);
+  };
+  
+  flatFunction(hardMatrix, 0);
+  console.log('recursive:', recursiveArray);
