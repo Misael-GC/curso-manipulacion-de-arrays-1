@@ -78,6 +78,11 @@ console.log(orders)
 //   ]
 
 
+
+
+
+
+
 // reto de ordenar una fecha de tipo date de la mas reciente a la mas antigua y aplicarselo a orders
 
 const ordersF = [
