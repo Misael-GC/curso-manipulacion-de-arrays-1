@@ -143,3 +143,33 @@ console.log("reto", dates);
 
 
 //---aportes solucion
+
+
+const ordersA = [
+    {
+      customerName: "Nicolas",
+      total: 600,
+      delivered: true,
+      datesA: '2021-10-8 12:00:00'
+    },
+    {
+      customerName: "Zulema",
+      total: 120,
+      delivered: false,
+      datesA: '2021-10-29 12:00:00'
+    },
+    {
+      customerName: "Santiago",
+      total: 1840,
+      delivered: true,
+      datesA: '2021-10-3 12:00:00'
+    },
+    {
+      customerName: "Valentina",
+      total: 240,
+      delivered: true,
+      datesA: '2021-10-31 12:00:00'
+    },
+  ];
+  ordersA.sort((a,b) => new Date(b.datesA) - new Date(a.datesA));
+  console.log('Aporte', ordersA);
