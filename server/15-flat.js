@@ -74,3 +74,29 @@ const hardMatrix = [
   
   flatFunction(hardMatrix, 0);
   console.log('recursive:', recursiveArray);
+
+
+  //otro aporte
+
+  const matriz2 = [
+    1,
+    [1,2,3],
+    [4,5,6],
+    [7,8,[9,10,[11,12]]]
+];
+
+function aplanarMatriz(matriz2){
+  let array = [];
+  for (element of matriz2){
+    if(Array.isArray(element)){
+      array = array.concat(aplanarMatriz(element));
+    }else{
+      array.push(element);
+    }
+  }
+  return array;
+}
+
+console.log(aplanarMatriz(matriz2));
+
+// result: [  1, 1, 2, 3,  4,  5, 6, 7, 8, 9, 10, 11, 12 ];
