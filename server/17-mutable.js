@@ -133,3 +133,19 @@ console.log('new', newArray2);
 });
 
 console.log('aporte2', newArrayA2);
+
+//nota curiosa
+//El metodo .splice(), no solamente sirve para borrar en cierta
+// forma un elemento sino también para agregarlos al index del array que tu quieres.Ej:
+
+// Tenemos el siguiente array:
+// const holaMundo = [‘Maria’, ‘Andres’, ‘Cecilia’];
+
+// Y quizás lo que quieres es añadir a ‘Roberto’ después de Andres y antes de cecilia.
+
+// Buscamos el index con el findIndex de cecilia.
+// holaMundo.splice(index, 0, ‘Roberto’)
+// & listo, pones tu index de celcilia, no le ponemos un 1
+// porque no queremos eliminar ningún elemento hacia la
+// derecha sino un 0, pones la coma y pones el o los
+// elementos que quieres agregar allí.
