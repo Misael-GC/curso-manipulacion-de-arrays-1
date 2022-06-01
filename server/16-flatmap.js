@@ -62,3 +62,13 @@ const solution = Object.values(calendars).flatMap(item => {
  return item.map(date => date.startDate)
 });
 console.log(solution);
+
+
+//aporte 
+const rtaAport = Object.values(calendars).flat().flatMap(cal => cal.startDate)
+
+
+//explicacion
+// 1- Con Object.values, obtenemos una lista con los valores de cada key en nuestro objeto calendars
+// 2 - Con flat “aplanamos” la lista ya que con el paso anterior nos quedan dos arrays dentro de uno: [ [ ], [ ] ]
+// 3 - Con map recorremos cada elemento de la lista ya unificada. Estos elementos son finalmente objetos asi que solo nos queda acceder al atributo de startDate y listo
