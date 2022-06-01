@@ -44,4 +44,4 @@ console.log('elementos', elements);
 
 // Si estas trabajando con un arrays de Objs igual una forma de copiar cada elemento sin la referencia podría ser:
 
-const newArray = myArray.map(a => ({…a}));
+// const newArray = myArray.map(a => ({…a}));
